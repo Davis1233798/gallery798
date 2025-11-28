@@ -1,0 +1,49 @@
+{
+  "name": "game-portal",
+  "version": "1.0.0",
+  "description": "一個專為手機優化的遊戲入口網站，提供 500+ 個免費 HTML5 遊戲",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server . -p 8080 -c-1 --cors",
+    "build": "echo 'Static website - no build process required'",
+    "test": "echo 'Testing website accessibility...' && curl -f http://localhost:8080 || echo 'Please start the server first with npm start'",
+    "dev": "http-server . -p 8080 -c-1 --cors -o",
+    "deploy": "gh-pages -d .",
+    "lint": "echo 'Linting HTML, CSS, and JavaScript files...'",
+    "validate": "echo 'Validating website structure and PWA requirements...'"
+  },
+  "keywords": [
+    "games",
+    "html5",
+    "mobile",
+    "pwa",
+    "gaming",
+    "portal",
+    "免費遊戲",
+    "手機遊戲"
+  ],
+  "author": "Game Portal Team",
+  "license": "MIT",
+  "homepage": "https://davis1233798.github.io/game_portal/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Davis1233798/game_portal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Davis1233798/game_portal/issues"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "gh-pages": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "iOS >= 10",
+    "Android >= 7"
+  ]
+}

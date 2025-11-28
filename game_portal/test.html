@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遊戲入口網站測試</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-result { padding: 10px; margin: 5px 0; border-radius: 5px; }
+        .pass { background: #d4edda; color: #155724; }
+        .fail { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <h1>🎮 遊戲入口網站測試</h1>
+    <div id="test-results"></div>
+
+    <script>
+        // 簡單的測試框架
+        class TestRunner {
+            constructor() {
+                this.results = [];
+                this.container = document.getElementById('test-results');
+            }
+
+            test(name, testFunc) {
+                try {
+                    const result = testFunc();
+                    this.addResult(name, true, result);
+                } catch (error) {
+                    this.addResult(name, false, error.message);
+                }
+            }
+
+            addResult(name, passed, message) {
+                this.results.push({ name, passed, message });
+                this.renderResult(name, passed, message);
+            }
+
+            renderResult(name, passed, message) {
+                const div = document.createElement('div');
+                div.className = `test-result ${passed ? 'pass' : 'fail'}`;
+                div.innerHTML = `
+                    <strong>${passed ? '✅' : '❌'} ${name}</strong>
+                    ${message ? `<br><small>${message}</small>` : ''}
+                `;
+                this.container.appendChild(div);
+            }
+
+            summary() {
+                const passed = this.results.filter(r => r.passed).length;
+                const total = this.results.length;
+                const div = document.createElement('div');
+                div.className = `test-result ${passed === total ? 'pass' : 'fail'}`;
+                div.innerHTML = `<strong>測試完成: ${passed}/${total} 通過</strong>`;
+                this.container.appendChild(div);
+            }
+        }
+
+        // 執行測試
+        const runner = new TestRunner();
+
+        runner.test('檢查 HTML 文件存在', () => {
+            return fetch('index.html').then(response => {
+                if (!response.ok) throw new Error('無法載入 index.html');
+                return 'index.html 載入成功';
+            });
+        });
+
+        runner.test('檢查 CSS 文件存在', () => {
+            return fetch('styles.css').then(response => {
+                if (!response.ok) throw new Error('無法載入 styles.css');
+                return 'styles.css 載入成功';
+            });
+        });
+
+        runner.test('檢查 JavaScript 文件存在', () => {
+            return fetch('script.js').then(response => {
+                if (!response.ok) throw new Error('無法載入 script.js');
+                return 'script.js 載入成功';
+            });
+        });
+
+        runner.test('檢查遊戲資料庫文件存在', () => {
+            return fetch('games-database.js').then(response => {
+                if (!response.ok) throw new Error('無法載入 games-database.js');
+                return 'games-database.js 載入成功';
+            });
+        });
+
+        runner.test('檢查 PWA Manifest 存在', () => {
+            return fetch('manifest.json').then(response => {
+                if (!response.ok) throw new Error('無法載入 manifest.json');
+                return 'manifest.json 載入成功';
+            });
+        });
+
+        runner.test('檢查 Service Worker 存在', () => {
+            return fetch('sw.js').then(response => {
+                if (!response.ok) throw new Error('無法載入 sw.js');
+                return 'sw.js 載入成功';
+            });
+        });
+
+        // 等待所有異步測試完成
+        setTimeout(() => {
+            runner.summary();
+        }, 2000);
+    </script>
+</body>
+</html>

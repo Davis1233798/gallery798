@@ -6,7 +6,7 @@ const gamesDatabase = [
         title: "Subway Surfers",
         description: "經典跑酷遊戲，躲避障礙物收集金幣",
         category: "action",
-        url: "https://poki.com/en/g/subway-surfers",
+        url: "https://sz-games.github.io/games/subway-surfers/",
         image: "https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/53c8a31e34c0ddddc7a8b01f1bf95ad6.png",
         featured: true,
         rating: 4.8
@@ -16,88 +16,69 @@ const gamesDatabase = [
         title: "Stickman Hook",
         description: "用鉤子在城市中擺盪的火柴人遊戲",
         category: "action",
-        url: "https://poki.com/en/g/stickman-hook",
+        url: "https://mountain658.github.io/g/stickmanhook/index.html",
         image: "https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/0076b4a8bc3893ad8a7aab5ce9a7dc37.png",
         featured: true,
         rating: 4.7
     },
     {
         id: 3,
-        title: "Red and Green 2",
-        description: "雙人合作冒險遊戲，控制紅綠兩個角色",
-        category: "action",
-        url: "https://www.htmlgames.com/game/red-and-green-2/",
-        image: "https://via.placeholder.com/300x200/ff4444/ffffff?text=Red+and+Green+2",
-        rating: 4.5
-    },
-    {
-        id: 4,
-        title: "Ninja Breakout",
-        description: "忍者動作冒險遊戲，展現你的忍術技巧",
-        category: "action",
-        url: "https://www.htmlgames.com/game/ninja-breakout/",
-        image: "https://via.placeholder.com/300x200/333333/ffffff?text=Ninja+Breakout",
-        rating: 4.3
-    },
-    {
-        id: 5,
         title: "Temple Run 2",
         description: "神廟逃亡續作，更多挑戰等你來闖",
         category: "action",
-        url: "https://poki.com/en/g/temple-run-2",
+        url: "https://y2k04.github.io/templerun2/",
         image: "https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/5f5e0b75a2e9a4b85ad8c56a0c8a3c5a.png",
         featured: true,
         rating: 4.6
+    },
+    {
+        id: 4,
+        title: "Geometry Dash",
+        description: "節奏跑酷遊戲，考驗反應速度",
+        category: "action",
+        url: "https://scratch.mit.edu/projects/105500895/embed",
+        image: "https://via.placeholder.com/300x200/ffff00/000000?text=Geometry+Dash",
+        rating: 4.5
+    },
+    {
+        id: 5,
+        title: "Crossy Road",
+        description: "過馬路遊戲，小心車輛",
+        category: "action",
+        url: "https://scratch.mit.edu/projects/115682042/embed",
+        image: "https://via.placeholder.com/300x200/00ff00/ffffff?text=Crossy+Road",
+        rating: 4.4
     },
 
     // 益智遊戲 (Puzzle Games)
     {
         id: 6,
-        title: "Sudoku Classic",
-        description: "經典數獨遊戲，訓練你的邏輯思維",
-        category: "puzzle",
-        url: "https://www.htmlgames.com/game/sudoku-classic/",
-        image: "https://via.placeholder.com/300x200/4169e1/ffffff?text=Sudoku+Classic",
-        featured: true,
-        rating: 4.8
-    },
-    {
-        id: 7,
         title: "2048",
         description: "滑動數字方塊，達到2048的經典益智遊戲",
         category: "puzzle",
-        url: "https://poki.com/en/g/2048",
+        url: "https://gabrielecirulli.github.io/2048/",
         image: "https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/2048-icon.png",
         featured: true,
         rating: 4.7
     },
     {
-        id: 8,
-        title: "Jewels Classic",
-        description: "寶石消除遊戲，連線相同顏色的寶石",
-        category: "puzzle",
-        url: "https://www.htmlgames.com/game/jewels-classic/",
-        image: "https://via.placeholder.com/300x200/8B5CF6/ffffff?text=Jewels+Classic",
-        rating: 4.6
-    },
-    {
-        id: 9,
-        title: "Bubble Shooter",
-        description: "射擊泡泡消除遊戲，考驗你的精準度",
-        category: "puzzle",
-        url: "https://poki.com/en/g/bubble-shooter",
-        image: "https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/bubble-shooter.png",
-        rating: 4.5
-    },
-    {
-        id: 10,
+        id: 7,
         title: "Tetris",
         description: "經典俄羅斯方塊，永恆的益智遊戲",
         category: "puzzle",
-        url: "https://tetris.com/play-tetris",
+        url: "https://chvin.github.io/react-tetris/",
         image: "https://via.placeholder.com/300x200/00ff00/ffffff?text=Tetris",
         featured: true,
         rating: 4.9
+    },
+    {
+        id: 8,
+        title: "Sudoku",
+        description: "經典數獨遊戲",
+        category: "puzzle",
+        url: "https://html5.gamedistribution.com/97371764fe9e49339292edb3599e1975/",
+        image: "https://via.placeholder.com/300x200/4169e1/ffffff?text=Sudoku",
+        rating: 4.6
     },
 
     // 賽車遊戲 (Racing Games)
@@ -106,7 +87,7 @@ const gamesDatabase = [
         title: "Drive Mad",
         description: "瘋狂駕駛遊戲，在崎嶇地形中保持平衡",
         category: "racing",
-        url: "https://poki.com/en/g/drive-mad",
+        url: "https://ubg77.github.io/edit/drive-mad/",
         image: "https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/drive-mad.png",
         featured: true,
         rating: 4.7
@@ -116,17 +97,18 @@ const gamesDatabase = [
         title: "Moto X3M",
         description: "摩托車特技賽車遊戲",
         category: "racing",
-        url: "https://poki.com/en/g/moto-x3m",
+        url: "https://html5.gamedistribution.com/5d3c767d44d44d68a943566b9059c30f/",
         image: "https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/moto-x3m.png",
         rating: 4.6
     },
     {
         id: 13,
-        title: "Hill Climb Racing",
-        description: "爬山賽車遊戲，挑戰各種地形",
+        title: "Slope",
+        description: "3D滾球跑酷遊戲",
         category: "racing",
-        url: "https://poki.com/en/g/hill-climb-racing",
-        image: "https://via.placeholder.com/300x200/ff6b35/ffffff?text=Hill+Climb+Racing",
+        url: "https://kdata1.com/2020/05/slope/",
+        image: "https://via.placeholder.com/300x200/00ff00/000000?text=Slope",
+        featured: true,
         rating: 4.5
     },
 
@@ -136,7 +118,7 @@ const gamesDatabase = [
         title: "Pac-Man",
         description: "經典小精靈遊戲，吃豆避鬼的永恆經典",
         category: "arcade",
-        url: "https://www.google.com/doodles/30th-anniversary-of-pac-man",
+        url: "https://nisreensalameh.github.io/PacMan-game/",
         image: "https://via.placeholder.com/300x200/ffff00/000000?text=Pac-Man",
         featured: true,
         rating: 4.9
@@ -146,18 +128,18 @@ const gamesDatabase = [
         title: "Flappy Bird",
         description: "點擊飛行的小鳥遊戲，簡單卻極具挑戰性",
         category: "arcade",
-        url: "https://poki.com/en/g/flappy-bird",
+        url: "https://aaarafat.github.io/JS-Flappy-Bird/",
         image: "https://via.placeholder.com/300x200/87ceeb/ffffff?text=Flappy+Bird",
         rating: 4.4
     },
     {
         id: 16,
-        title: "Snake Game",
-        description: "經典貪吃蛇遊戲，控制蛇吃食物成長",
+        title: "Chrome Dino",
+        description: "斷網時的小恐龍遊戲",
         category: "arcade",
-        url: "https://poki.com/en/g/snake-game",
-        image: "https://via.placeholder.com/300x200/00aa00/ffffff?text=Snake+Game",
-        rating: 4.6
+        url: "https://wayou.github.io/t-rex-runner/",
+        image: "https://via.placeholder.com/300x200/cccccc/000000?text=Dino",
+        rating: 4.8
     },
 
     // 體育遊戲 (Sports Games)
@@ -166,7 +148,7 @@ const gamesDatabase = [
         title: "Basketball Stars",
         description: "籃球明星對戰遊戲",
         category: "sports",
-        url: "https://poki.com/en/g/basketball-stars",
+        url: "https://html5.gamedistribution.com/69d78d071f704fa183d75b4114ae4043/",
         image: "https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/basketball-stars.png",
         rating: 4.5
     },
@@ -175,7 +157,7 @@ const gamesDatabase = [
         title: "Football Legends",
         description: "足球傳奇遊戲，展現你的足球技巧",
         category: "sports",
-        url: "https://poki.com/en/g/football-legends-2021",
+        url: "https://html5.gamedistribution.com/4f9093ce5ac740a5a474e72880e47244/",
         image: "https://via.placeholder.com/300x200/00aa00/ffffff?text=Football+Legends",
         rating: 4.4
     },
@@ -186,36 +168,18 @@ const gamesDatabase = [
         title: "Shell Shockers",
         description: "蛋殼射擊遊戲，多人線上FPS",
         category: "shooter",
-        url: "https://poki.com/en/g/shell-shockers",
+        url: "https://shellshock.io/",
         image: "https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/shell-shockers.png",
         rating: 4.6
-    },
-    {
-        id: 20,
-        title: "Zombs Royale",
-        description: "殭屍皇家大逃殺遊戲",
-        category: "shooter",
-        url: "https://poki.com/en/g/zombs-royale",
-        image: "https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/zombs-royale.png",
-        rating: 4.5
     },
 
     // 策略遊戲 (Strategy Games)
     {
         id: 21,
-        title: "Clash of Clans",
-        description: "部落衝突策略遊戲",
-        category: "strategy",
-        url: "https://poki.com/en/g/clash-of-clans",
-        image: "https://via.placeholder.com/300x200/4169e1/ffffff?text=Clash+of+Clans",
-        rating: 4.7
-    },
-    {
-        id: 22,
-        title: "Chess.com",
+        title: "Chess",
         description: "國際象棋在線對戰",
         category: "strategy",
-        url: "https://www.chess.com/play",
+        url: "https://lichess.org/tv/frame?theme=brown&bg=dark",
         image: "https://via.placeholder.com/300x200/8B4513/ffffff?text=Chess",
         rating: 4.8
     },
@@ -229,15 +193,6 @@ const gamesDatabase = [
         url: "https://agar.io/",
         image: "https://via.placeholder.com/300x200/00ff7f/ffffff?text=Agar.io",
         rating: 4.6
-    },
-    {
-        id: 24,
-        title: "Slither.io",
-        description: "貪吃蛇大作戰多人在線版本",
-        category: "multiplayer",
-        url: "https://slither.io/",
-        image: "https://via.placeholder.com/300x200/ff69b4/ffffff?text=Slither.io",
-        rating: 4.5
     }
 ];
 
@@ -249,7 +204,7 @@ const actionGames = [
     "Super Mario Bros", "Sonic the Hedgehog", "Mega Man", "Street Fighter", "Mortal Kombat",
     "Tekken", "King of Fighters", "Double Dragon", "Final Fight", "Metal Slug",
     "Contra", "Gradius", "R-Type", "Shinobi", "Ninja Gaiden",
-    "Castlevania", "Metroid", "Bionic Commando", "Ghosts 'n Goblins", "Strider",
+    "Castlevania", "Metroid", "Bionic Commando", "Ghosts 'n' Goblins", "Strider",
     "Golden Axe", "Streets of Rage", "Altered Beast", "Shinobi", "Alex Kidd",
     "Wonder Boy", "Rastan", "Black Tiger", "Commando", "Ikari Warriors",
     "Rygar", "Legendary Wings", "Section Z", "Trojan", "Avengers",
@@ -308,69 +263,6 @@ const sportsGames = [
     "1080 Snowboarding", "Cool Boarders", "Amped", "Shaun White Snowboarding", "Snow"
 ];
 
-// 為每個類別生成更多遊戲
-let gameId = 25;
-
-actionGames.forEach((title, index) => {
-    additionalGames.push({
-        id: gameId++,
-        title: title,
-        description: `${title} - 經典動作遊戲`,
-        category: "action",
-        url: `https://www.crazygames.com/game/${title.toLowerCase().replace(/\s+/g, '-')}`,
-        image: `https://via.placeholder.com/300x200/ff6b6b/ffffff?text=${encodeURIComponent(title)}`,
-        rating: 4.0 + Math.random() * 0.9
-    });
-});
-
-puzzleGames.forEach((title, index) => {
-    additionalGames.push({
-        id: gameId++,
-        title: title,
-        description: `${title} - 益智解謎遊戲`,
-        category: "puzzle",
-        url: `https://www.crazygames.com/game/${title.toLowerCase().replace(/\s+/g, '-')}`,
-        image: `https://via.placeholder.com/300x200/4ecdc4/ffffff?text=${encodeURIComponent(title)}`,
-        rating: 4.0 + Math.random() * 0.9
-    });
-});
-
-racingGames.forEach((title, index) => {
-    additionalGames.push({
-        id: gameId++,
-        title: title,
-        description: `${title} - 賽車競速遊戲`,
-        category: "racing",
-        url: `https://www.crazygames.com/game/${title.toLowerCase().replace(/\s+/g, '-')}`,
-        image: `https://via.placeholder.com/300x200/ff9f43/ffffff?text=${encodeURIComponent(title)}`,
-        rating: 4.0 + Math.random() * 0.9
-    });
-});
-
-arcadeGames.forEach((title, index) => {
-    additionalGames.push({
-        id: gameId++,
-        title: title,
-        description: `${title} - 經典街機遊戲`,
-        category: "arcade",
-        url: `https://www.crazygames.com/game/${title.toLowerCase().replace(/\s+/g, '-')}`,
-        image: `https://via.placeholder.com/300x200/a55eea/ffffff?text=${encodeURIComponent(title)}`,
-        rating: 4.0 + Math.random() * 0.9
-    });
-});
-
-sportsGames.forEach((title, index) => {
-    additionalGames.push({
-        id: gameId++,
-        title: title,
-        description: `${title} - 體育運動遊戲`,
-        category: "sports",
-        url: `https://www.crazygames.com/game/${title.toLowerCase().replace(/\s+/g, '-')}`,
-        image: `https://via.placeholder.com/300x200/26de81/ffffff?text=${encodeURIComponent(title)}`,
-        rating: 4.0 + Math.random() * 0.9
-    });
-});
-
 // 添加更多射擊遊戲
 const shooterGames = [
     "Call of Duty", "Counter Strike", "Valorant", "Overwatch", "Apex Legends",
@@ -380,18 +272,6 @@ const shooterGames = [
     "House of the Dead", "Time Crisis", "Point Blank", "Virtua Cop", "The Typing of the Dead"
 ];
 
-shooterGames.forEach((title, index) => {
-    additionalGames.push({
-        id: gameId++,
-        title: title,
-        description: `${title} - 射擊對戰遊戲`,
-        category: "shooter",
-        url: `https://www.crazygames.com/game/${title.toLowerCase().replace(/\s+/g, '-')}`,
-        image: `https://via.placeholder.com/300x200/ff6348/ffffff?text=${encodeURIComponent(title)}`,
-        rating: 4.0 + Math.random() * 0.9
-    });
-});
-
 // 添加更多策略遊戲
 const strategyGames = [
     "Age of Empires", "Civilization", "StarCraft", "Warcraft", "Command & Conquer",
@@ -399,18 +279,6 @@ const strategyGames = [
     "XCOM", "Fire Emblem", "Final Fantasy Tactics", "Tactics Ogre", "Advance Wars",
     "Chess", "Checkers", "Go", "Shogi", "Xiangqi"
 ];
-
-strategyGames.forEach((title, index) => {
-    additionalGames.push({
-        id: gameId++,
-        title: title,
-        description: `${title} - 策略戰術遊戲`,
-        category: "strategy",
-        url: `https://www.crazygames.com/game/${title.toLowerCase().replace(/\s+/g, '-')}`,
-        image: `https://via.placeholder.com/300x200/5f27cd/ffffff?text=${encodeURIComponent(title)}`,
-        rating: 4.0 + Math.random() * 0.9
-    });
-});
 
 // 添加更多多人遊戲
 const multiplayerGames = [
@@ -420,17 +288,34 @@ const multiplayerGames = [
     "World of Warcraft", "Final Fantasy XIV", "Guild Wars 2", "Elder Scrolls Online", "Star Wars The Old Republic"
 ];
 
-multiplayerGames.forEach((title, index) => {
-    additionalGames.push({
-        id: gameId++,
-        title: title,
-        description: `${title} - 多人在線遊戲`,
-        category: "multiplayer",
-        url: `https://www.crazygames.com/game/${title.toLowerCase().replace(/\s+/g, '-')}`,
-        image: `https://via.placeholder.com/300x200/00d2d3/ffffff?text=${encodeURIComponent(title)}`,
-        rating: 4.0 + Math.random() * 0.9
+// 為每個類別生成更多遊戲
+let gameId = 25;
+
+// 使用一個通用的、可嵌入的遊戲URL作為後備
+const GENERIC_GAME_URL = "https://gabrielecirulli.github.io/2048/";
+
+function addGames(titles, category) {
+    titles.forEach((title) => {
+        additionalGames.push({
+            id: gameId++,
+            title: title,
+            description: `${title} - 經典${window.gameCategories[category].name}遊戲`,
+            category: category,
+            url: GENERIC_GAME_URL,
+            image: `https://via.placeholder.com/300x200/${Math.floor(Math.random() * 16777215).toString(16)}/ffffff?text=${encodeURIComponent(title)}`,
+            rating: 4.0 + Math.random() * 0.9
+        });
     });
-});
+}
+
+addGames(actionGames, "action");
+addGames(puzzleGames, "puzzle");
+addGames(racingGames, "racing");
+addGames(arcadeGames, "arcade");
+addGames(sportsGames, "sports");
+addGames(shooterGames, "shooter");
+addGames(strategyGames, "strategy");
+addGames(multiplayerGames, "multiplayer");
 
 // 將所有遊戲合併
 const allGames = [...gamesDatabase, ...additionalGames];
@@ -439,14 +324,14 @@ const allGames = [...gamesDatabase, ...additionalGames];
 while (allGames.length < 500) {
     const categories = ['action', 'puzzle', 'racing', 'arcade', 'sports', 'shooter', 'strategy', 'multiplayer'];
     const randomCategory = categories[Math.floor(Math.random() * categories.length)];
-    
+
     allGames.push({
         id: gameId++,
         title: `Game ${gameId}`,
-        description: `隨機生成的${randomCategory}遊戲`,
+        description: `隨機生成的${window.gameCategories[randomCategory].name}遊戲`,
         category: randomCategory,
-        url: `https://www.crazygames.com/game/game-${gameId}`,
-        image: `https://via.placeholder.com/300x200/${Math.floor(Math.random()*16777215).toString(16)}/ffffff?text=Game+${gameId}`,
+        url: GENERIC_GAME_URL,
+        image: `https://via.placeholder.com/300x200/${Math.floor(Math.random() * 16777215).toString(16)}/ffffff?text=Game+${gameId}`,
         rating: 3.5 + Math.random() * 1.5
     });
 }

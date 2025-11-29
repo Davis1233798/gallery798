@@ -3,13 +3,13 @@ const gamesDatabase = [
     // 動作遊戲 (Action Games)
     {
         id: 1,
-        title: "Subway Surfers",
-        description: "經典跑酷遊戲，躲避障礙物收集金幣",
+        title: "Subway Surfers: Hong Kong",
+        description: "經典跑酷遊戲香港版，躲避障礙物收集金幣",
         category: "action",
-        url: "https://sz-games.github.io/games/subway-surfers/",
-        image: "https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/53c8a31e34c0ddddc7a8b01f1bf95ad6.png",
+        url: "https://i.gse.io/subway-surfers/hong-kong/",
+        image: "https://img.kuioo.tw/i/subway-surfers-hong-kong.webp",
         featured: true,
-        rating: 4.8
+        rating: 4.9
     },
     {
         id: 2,
@@ -49,10 +49,20 @@ const gamesDatabase = [
         image: "https://via.placeholder.com/300x200/00ff00/ffffff?text=Crossy+Road",
         rating: 4.4
     },
+    {
+        id: 6,
+        title: "Bloxd.io",
+        description: "沙盒王國，多人線上方塊建造遊戲",
+        category: "action",
+        url: "https://bloxd.io/",
+        image: "https://img.kuioo.tw/i/bloxd-io.webp",
+        featured: true,
+        rating: 4.8
+    },
 
     // 益智遊戲 (Puzzle Games)
     {
-        id: 6,
+        id: 7,
         title: "2048",
         description: "滑動數字方塊，達到2048的經典益智遊戲",
         category: "puzzle",
@@ -62,7 +72,7 @@ const gamesDatabase = [
         rating: 4.7
     },
     {
-        id: 7,
+        id: 8,
         title: "Tetris",
         description: "經典俄羅斯方塊，永恆的益智遊戲",
         category: "puzzle",
@@ -72,7 +82,7 @@ const gamesDatabase = [
         rating: 4.9
     },
     {
-        id: 8,
+        id: 9,
         title: "Sudoku",
         description: "經典數獨遊戲",
         category: "puzzle",
@@ -169,7 +179,7 @@ const gamesDatabase = [
         description: "蛋殼射擊遊戲，多人線上FPS",
         category: "shooter",
         url: "https://shellshock.io/",
-        image: "https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/shell-shockers.png",
+        image: "https://img.kuioo.tw/i/shell-shockers.webp",
         rating: 4.6
     },
 
@@ -181,6 +191,16 @@ const gamesDatabase = [
         category: "strategy",
         url: "https://lichess.org/tv/frame?theme=brown&bg=dark",
         image: "https://via.placeholder.com/300x200/8B4513/ffffff?text=Chess",
+        rating: 4.8
+    },
+    {
+        id: 22,
+        title: "都道府縣大戰",
+        description: "經典策略遊戲，統一日本",
+        category: "strategy",
+        url: "http://www.dan-ball.jp/javagame/toudou/",
+        image: "http://www.gamesmomo.com/gmimg/6780.gif",
+        featured: true,
         rating: 4.8
     },
 
@@ -292,6 +312,7 @@ const multiplayerGames = [
 let gameId = 25;
 
 // 使用一個通用的、可嵌入的遊戲URL作為後備
+// 這裡使用 2048 作為一個安全的後備，因為它加載快且通常不被封鎖
 const GENERIC_GAME_URL = "https://gabrielecirulli.github.io/2048/";
 
 function addGames(titles, category) {
@@ -301,6 +322,8 @@ function addGames(titles, category) {
             title: title,
             description: `${title} - 經典${window.gameCategories[category].name}遊戲`,
             category: category,
+            // 使用通用URL，因為我們無法為每個生成的標題找到特定的嵌入URL
+            // 在實際應用中，這裡應該是真實的遊戲URL資料庫
             url: GENERIC_GAME_URL,
             image: `https://via.placeholder.com/300x200/${Math.floor(Math.random() * 16777215).toString(16)}/ffffff?text=${encodeURIComponent(title)}`,
             rating: 4.0 + Math.random() * 0.9

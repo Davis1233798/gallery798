@@ -249,18 +249,15 @@ class GamePortal {
 
     // Service Worker 初始化（PWA支援）
     initServiceWorker() {
-        /*
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
-                .then(registration => {
-                    console.log('Service Worker 註冊成功:', registration);
-                })
-                .catch(error => {
-                    console.log('Service Worker 註冊失敗:', error);
-                });
+            navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                for (let registration of registrations) {
+                    registration.unregister();
+                    console.log('Service Worker unregistered to ensure fresh content');
+                }
+            });
         }
-        */
-        console.log("Service Worker disabled for development");
+        console.log("Service Worker disabled for development and cache cleared");
     }
 
     // 隨機遊戲功能

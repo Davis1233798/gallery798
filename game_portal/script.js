@@ -8,7 +8,7 @@ class GamePortal {
         this.gamesPerPage = 20;
         this.searchQuery = '';
         this.playedToday = this.getPlayedToday();
-        
+
         this.init();
     }
 
@@ -24,16 +24,16 @@ class GamePortal {
         // 搜尋功能
         const searchInput = document.getElementById('searchInput');
         const searchBtn = document.getElementById('searchBtn');
-        
+
         searchInput.addEventListener('input', (e) => {
             this.searchQuery = e.target.value.toLowerCase();
             this.resetAndLoadGames();
         });
-        
+
         searchBtn.addEventListener('click', () => {
             this.resetAndLoadGames();
         });
-        
+
         searchInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 this.resetAndLoadGames();
@@ -48,7 +48,7 @@ class GamePortal {
                 categoryBtns.forEach(b => b.classList.remove('active'));
                 // 添加active class到點擊的按鈕
                 e.target.classList.add('active');
-                
+
                 this.currentFilter = e.target.dataset.category;
                 this.resetAndLoadGames();
                 this.updateFilterInfo();
@@ -65,11 +65,11 @@ class GamePortal {
         // 遊戲模態框
         const modal = document.getElementById('gameModal');
         const closeModal = document.getElementById('closeModal');
-        
+
         closeModal.addEventListener('click', () => {
             this.closeGameModal();
         });
-        
+
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 this.closeGameModal();
@@ -94,7 +94,7 @@ class GamePortal {
 
         // 應用搜尋過濾
         if (this.searchQuery) {
-            filteredGames = filteredGames.filter(game => 
+            filteredGames = filteredGames.filter(game =>
                 game.title.toLowerCase().includes(this.searchQuery) ||
                 game.description.toLowerCase().includes(this.searchQuery)
             );
@@ -129,7 +129,7 @@ class GamePortal {
             const gamesToShow = filteredGames.slice(startIndex, endIndex);
 
             const gamesHTML = gamesToShow.map(game => this.createGameCard(game)).join('');
-            
+
             if (reset) {
                 gamesContainer.innerHTML = gamesHTML;
             } else {
@@ -177,10 +177,10 @@ class GamePortal {
         modalTitle.textContent = game.title;
         gameFrame.src = game.url;
         modal.style.display = 'block';
-        
+
         // 記錄遊戲遊玩
         this.recordGamePlay();
-        
+
         // 阻止背景滾動
         document.body.style.overflow = 'hidden';
     }
@@ -188,10 +188,10 @@ class GamePortal {
     closeGameModal() {
         const modal = document.getElementById('gameModal');
         const gameFrame = document.getElementById('gameFrame');
-        
+
         modal.style.display = 'none';
         gameFrame.src = '';
-        
+
         // 恢復背景滾動
         document.body.style.overflow = 'auto';
     }
@@ -208,10 +208,10 @@ class GamePortal {
     getPlayedToday() {
         const stored = localStorage.getItem('playedToday');
         if (!stored) return 0;
-        
+
         const data = JSON.parse(stored);
         const today = new Date().toDateString();
-        
+
         return data.date === today ? data.count : 0;
     }
 
@@ -229,7 +229,7 @@ class GamePortal {
         const filteredGames = this.getFilteredGames();
         const filterInfo = document.getElementById('filterInfo');
         const gameCount = document.getElementById('gameCount');
-        
+
         if (this.currentFilter === 'all' && !this.searchQuery) {
             filterInfo.textContent = '顯示所有遊戲';
         } else if (this.searchQuery) {
@@ -238,7 +238,7 @@ class GamePortal {
             const categoryName = this.categories[this.currentFilter]?.name || this.currentFilter;
             filterInfo.textContent = `${categoryName}遊戲`;
         }
-        
+
         gameCount.textContent = `(${filteredGames.length} 個遊戲)`;
     }
 
@@ -249,6 +249,7 @@ class GamePortal {
 
     // Service Worker 初始化（PWA支援）
     initServiceWorker() {
+        /*
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js')
                 .then(registration => {
@@ -258,13 +259,15 @@ class GamePortal {
                     console.log('Service Worker 註冊失敗:', error);
                 });
         }
+        */
+        console.log("Service Worker disabled for development");
     }
 
     // 隨機遊戲功能
     playRandomGame() {
         const filteredGames = this.getFilteredGames();
         if (filteredGames.length === 0) return;
-        
+
         const randomIndex = Math.floor(Math.random() * filteredGames.length);
         const randomGame = filteredGames[randomIndex];
         this.openGame(randomGame.id);
@@ -274,13 +277,13 @@ class GamePortal {
     toggleFavorite(gameId) {
         const favorites = this.getFavorites();
         const index = favorites.indexOf(gameId);
-        
+
         if (index === -1) {
             favorites.push(gameId);
         } else {
             favorites.splice(index, 1);
         }
-        
+
         localStorage.setItem('gamePortalFavorites', JSON.stringify(favorites));
         this.updateFavoriteButtons();
     }
@@ -298,7 +301,7 @@ class GamePortal {
     // 搜尋建議功能
     getSearchSuggestions(query) {
         if (!query) return [];
-        
+
         return this.games
             .filter(game => game.title.toLowerCase().includes(query.toLowerCase()))
             .slice(0, 5)
@@ -318,7 +321,7 @@ document.addEventListener('keydown', (e) => {
         e.preventDefault();
         document.getElementById('searchInput').focus();
     }
-    
+
     // Ctrl/Cmd + R 隨機遊戲
     if ((e.ctrlKey || e.metaKey) && e.key === 'r') {
         e.preventDefault();
@@ -334,7 +337,7 @@ let deferredPrompt;
 window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
-    
+
     // 顯示安裝按鈕
     const installBtn = document.createElement('button');
     installBtn.textContent = '📱 安裝到主畫面';
@@ -349,7 +352,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
             installBtn.remove();
         });
     };
-    
+
     document.querySelector('.header-content').appendChild(installBtn);
 });
 
@@ -367,7 +370,7 @@ document.addEventListener('touchend', (e) => {
     const touchEndY = e.changedTouches[0].clientY;
     const deltaX = touchEndX - touchStartX;
     const deltaY = touchEndY - touchStartY;
-    
+
     // 滑動手勢檢測
     if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
         if (deltaX > 0) {

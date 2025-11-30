@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("Gallery App Started"); // Debug log
     const gallery = document.getElementById('gallery');
     const modal = document.getElementById('modal');
     const modalImg = document.getElementById('modal-img');
@@ -44,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => {
             console.error('Error fetching images:', error);
-            gallery.innerHTML = '<div class="loading">Error loading images. Ensure the Worker is running.</div>';
+            gallery.innerHTML = `<div class="loading">Error loading images: ${error.message}<br>Check console for details.</div>`;
         });
 
     function openModal(image) {

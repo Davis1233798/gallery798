@@ -1,0 +1,17 @@
+name = "gallery798"
+main = "worker/src/index.js"
+compatibility_date = "2023-10-25"
+
+[vars]
+# Environment variables if needed
+
+[[kv_namespaces]]
+binding = "CIVITAI_IMAGES"
+id = "YOUR_KV_NAMESPACE_ID" # Placeholder, user needs to create this or we use a local one for dev
+preview_id = "YOUR_PREVIEW_KV_NAMESPACE_ID"
+
+[triggers]
+crons = ["0 * * * *"] # Run every hour
+
+[site]
+bucket = "./public"

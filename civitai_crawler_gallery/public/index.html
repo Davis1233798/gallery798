@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civitai Gallery 798</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-orb"></div>
+    <div class="background-orb orb-2"></div>
+
+    <header>
+        <h1>Gallery 798</h1>
+        <p>Curated AI Art from Civitai</p>
+    </header>
+
+    <main id="gallery" class="gallery-grid">
+        <!-- Images will be injected here -->
+        <div class="loading">Loading Art...</div>
+    </main>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="Full size">
+            <div class="modal-info">
+                <h3 id="modal-prompt-title">Prompt</h3>
+                <p id="modal-prompt"></p>
+                <div class="modal-meta">
+                    <span id="modal-model"></span>
+                    <span id="modal-user"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

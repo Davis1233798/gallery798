@@ -2,6 +2,20 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civitai Gallery 798</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <div class="background-orb"></div>
+    <div class="background-orb orb-2"></div>
+
     <header>
         <h1>Gallery 798</h1>
         <p>Curated AI Art from Civitai</p>
@@ -13,5 +27,30 @@
     </main>
 
     <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="Full size">
+            <div class="modal-info">
+                <h3 id="modal-prompt-title">Prompt</h3>
+                <p id="modal-prompt"></p>
+                <div class="modal-meta">
+                    <span id="modal-model"></span>
+                    <span id="modal-user"></span>
+                </div>
+                <a id="modal-link" href="#" target="_blank" class="btn-link">View on Civitai</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adcash Scripts -->
+    <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+    <script type="text/javascript">
+        aclib.runAutoTag({
+            zoneId: 'icxeurkehr',
+        });
+    </script>
+
+    <script src="app.js"></script>
+</body>
 
 </html>

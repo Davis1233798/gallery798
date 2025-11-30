@@ -5,11 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalPrompt = document.getElementById('modal-prompt');
     const modalModel = document.getElementById('modal-model');
     const modalUser = document.getElementById('modal-user');
+    const modalLink = document.getElementById('modal-link'); // New element
     const closeBtn = document.querySelector('.close');
 
     // Fetch images from our Worker API
-    // For local development with `wrangler dev`, this should work if served correctly.
-    // In production, it points to /api/images
     fetch('/api/images')
         .then(response => {
             if (!response.ok) {
@@ -29,9 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const item = document.createElement('div');
                 item.className = 'gallery-item';
 
-                // Calculate aspect ratio for masonry feel if we wanted to get fancy with grid-row-end
-                // For now, CSS aspect-ratio handles it simply.
-
                 item.innerHTML = `
                     <img src="${image.url}" alt="AI Art" loading="lazy">
                     <div class="item-overlay">
@@ -48,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => {
             console.error('Error fetching images:', error);
-            // Fallback for demo if API fails (e.g. local file opening)
             gallery.innerHTML = '<div class="loading">Error loading images. Ensure the Worker is running.</div>';
         });
 
@@ -56,8 +51,16 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = 'block';
         modalImg.src = image.url;
         modalPrompt.textContent = image.prompt;
-        modalModel.textContent = `Model: ${image.stats?.model || 'Unknown'}`; // stats might not have model directly, check structure
+        modalModel.textContent = `Model: ${image.stats?.model || 'Unknown'}`;
         modalUser.textContent = `Artist: ${image.username}`;
+
+        // Set external link
+        if (image.id) {
+            modalLink.href = `https://civitai.com/images/${image.id}`;
+            modalLink.style.display = 'inline-block';
+        } else {
+            modalLink.style.display = 'none';
+        }
     }
 
     closeBtn.addEventListener('click', () => {

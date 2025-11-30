@@ -1,0 +1,20 @@
+﻿
+ ⛅️ wrangler 4.51.0
+───────────────────
+Fetching list of already uploaded assets...
+Building list of assets to upload...
+ = app.1c1f3084c6.js (already uploaded app.js)
+ = index.fc55bc46ff.html (already uploaded index.html)
+ = style.549ae779db.css (already uploaded style.css)
+Skipped uploading 3 existing assets.
+↗️  Done syncing assets
+Total Upload: 1.85 KiB / gzip: 0.86 KiB
+Your Worker has access to the following bindings:
+Binding                                                    Resource          
+env.CIVITAI_IMAGES (c53f36c83672473595723e1d532737c1)      KV Namespace      
+
+Uploaded gallery798 (4.83 sec)
+Deployed gallery798 triggers (2.06 sec)
+  https://gallery798.davis1233798.workers.dev
+  schedule: 0 * * * *
+Current Version ID: c7b11bb1-3608-4510-941c-82748afeb5c3

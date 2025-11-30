@@ -7,7 +7,7 @@ compatibility_date = "2023-10-25"
 
 [[kv_namespaces]]
 binding = "CIVITAI_IMAGES"
-id = "YOUR_KV_NAMESPACE_ID" # Placeholder, user needs to create this or we use a local one for dev
+id = "c53f36c83672473595723e1d532737c1"
 preview_id = "YOUR_PREVIEW_KV_NAMESPACE_ID"
 
 [triggers]

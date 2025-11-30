@@ -1,0 +1,59 @@
+﻿
+ ⛅️ wrangler 4.51.0
+───────────────────
+Fetching list of already uploaded assets...
+Building list of assets to upload...
+ = app.1c1f3084c6.js (already uploaded app.js)
+ = index.fc55bc46ff.html (already uploaded index.html)
+ = style.549ae779db.css (already uploaded style.css)
+Skipped uploading 3 existing assets.
+↗️  Done syncing assets
+Total Upload: 1.85 KiB / gzip: 0.86 KiB
+Your Worker has access to the following bindings:
+Binding                                        Resource          
+env.CIVITAI_IMAGES (YOUR_KV_NAMESPACE_ID)      KV Namespace      
+
+
+node.exe : [31mX [41
+;31m[[41;97mERROR[41
+;31m][0m [1mA reques
+t to the Cloudflare AP
+I (/accounts/6b64a43d0
+249ccc1a3d97f61343cee1
+5/workers/scripts/gall
+ery798) failed.[0m
+位於 C:\Program Files\no
+dejs\npx.ps1:29 字元:3
++   & $NODE_EXE $NPX_C
+LI_JS $args
++   ~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: ([31mX [4   
+ 1;31m...98) faile    
+d.[0m:String) []    ,
+ RemoteException
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+
+  KV namespace 'YOUR_K
+V_NAMESPACE_ID' is not
+ valid.  [code: 10042]
+  
+  If you think this is
+ a bug, please open an
+ issue at: [4mhttps:/
+/github.com/cloudflare
+/workers-sdk/issues/ne
+w/choose[0m
+
+
+🪵  Logs were written 
+to "C:\Users\solidityD
+eveloper\AppData\Roami
+ng\xdg.config\.wrangle
+r\logs\wrangler-2025-1
+1-30_10-50-41_323.log"
